@@ -29,6 +29,9 @@ namespace KairosDbClient
 
         public IReadOnlyDictionary<string, string> Tags => _tags;
 
+        [JsonProperty("ttl")]
+        public ulong TimeToLive { get; private set; }
+
         public Metric(string name)
         {
             Name = name;
@@ -59,6 +62,12 @@ namespace KairosDbClient
         public Metric AddDataPoints(IEnumerable<DataPoint> dataPoints)
         {
             _dataPoints.AddRange(dataPoints);
+            return this;
+        }
+
+        public Metric SetTimeToLive(ulong ttl)
+        {
+            TimeToLive = ttl;
             return this;
         }
 
