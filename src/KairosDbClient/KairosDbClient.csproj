@@ -3,13 +3,13 @@
   <PropertyGroup>
     <Description>A client for adding and querying metrics from kairosdb</Description>
     <VersionPrefix>0.2.1</VersionPrefix>
-    <Authors>syncromatics</Authors>
+    <Authors>syncromatics, Kvikal</Authors>
     <TargetFrameworks>netstandard1.1</TargetFrameworks>
-    <AssemblyName>KairosDbClient</AssemblyName>
-    <PackageId>KairosDbClient</PackageId>
+    <AssemblyName>Kvikal.KairosDbClient</AssemblyName>
+    <PackageId>Kvikal.KairosDbClient</PackageId>
     <PackageTags>kairosdb</PackageTags>
-    <PackageProjectUrl>https://github.com/syncromatics/KairosDbClientDotNet</PackageProjectUrl>
-    <PackageLicenseUrl>https://raw.githubusercontent.com/syncromatics/KairosDbClientDotNet/master/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/Kvikal/KairosDbClientDotNet</PackageProjectUrl>
+    <PackageLicenseUrl>https://raw.githubusercontent.com/Kvikal/KairosDbClientDotNet/master/LICENSE</PackageLicenseUrl>
   </PropertyGroup>
 
   <ItemGroup>
