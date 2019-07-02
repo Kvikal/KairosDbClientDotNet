@@ -19,11 +19,15 @@ namespace KairosDbClient
         public IReadOnlyList<Aggregator> Aggregators => _aggregators;
 
         [JsonProperty("group_by")]
-        public IReadOnlyList<GroupBy> GroupBy => _groupBys; 
+        public IReadOnlyList<GroupBy> GroupBy => _groupBys;
+
+        [JsonProperty("limit")]
+        public ulong? Limit { get; private set; }
 
         public QueryMetric(string name)
         {
             Name = name;
+            Limit = null;
         }
 
         public QueryMetric AddAggregator(Aggregator aggregator)
@@ -45,6 +49,20 @@ namespace KairosDbClient
         public QueryMetric AddGroupBy(GroupBy groupBy)
         {
             _groupBys.Add(groupBy);
+            return this;
+        }
+
+        public QueryMetric AddLimit(ulong? limit)
+        {
+            if (!limit.HasValue)
+                Limit = null;
+            else
+            {
+                if (limit.Value < 1)
+                    Limit = null;
+                else
+                    Limit = limit.Value;
+            }
             return this;
         }
     }
