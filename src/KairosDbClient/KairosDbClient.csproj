@@ -9,7 +9,7 @@
     <PackageId>Kvikal.KairosDbClient</PackageId>
     <PackageTags>kairosdb</PackageTags>
     <PackageProjectUrl>https://github.com/Kvikal/KairosDbClientDotNet</PackageProjectUrl>
-    <PackageLicense>https://raw.githubusercontent.com/Kvikal/KairosDbClientDotNet/master/LICENSE</PackageLicense>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
 
   <ItemGroup>
